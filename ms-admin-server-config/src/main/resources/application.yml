@@ -10,7 +10,7 @@ spring:
     config:
       server: 
         native:
-          searchLocations: file:///C:/Users/Erick/Documents/Erik/sts4.14/profe3/MS-02-2022/ms-admin-server-data
+          searchLocations: file:///C:/Users/Erick/Documents/Erik/stsMio/Profe2/MS-02-2022-02.-SpringCloud2021/ms-admin-server-data
 #Configuracion Cloud (git)
  # cloud:
  #   config:
