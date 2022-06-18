@@ -3,6 +3,8 @@ package pe.edu.galaxy.training.java.ms.sc.ventas.msventasgestionproductos.entity
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -18,6 +20,7 @@ public class ClienteEntity implements Serializable{
 
 		@Id
 	  	@Column(name = "ID_CLIENTE")
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long id;
 	  
 	  	@NotNull(message = "Nombre del producto es requerido")

@@ -2,14 +2,14 @@ package pe.edu.galaxy.training.java.ms.sc.ventas.msventasgestionproductos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
-@EnableDiscoveryClient
+@EnableEurekaClient
 @SpringBootApplication
-public class MsVentasGestionProductosApplication {
+public class MsProductosApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsVentasGestionProductosApplication.class, args);
+		SpringApplication.run(MsProductosApplication.class, args);
 	}
 
 }

@@ -10,20 +10,18 @@ spring:
     config:
       server: 
         native:
-          searchLocations: file:///C:/Users/Erick/Documents/Erik/sts/Profe2/MS-02-2022-02.-SpringCloud2021/ms-admin-server-data
-
+          searchLocations: file:///C:/Users/Erick/Documents/Erik/sts4.14/profe3/MS-02-2022/ms-admin-server-data
 #Configuracion Cloud (git)
-#  cloud:
-#    config:
-#      server:
-#        git:
-#          uri: https://github.com/GalaxyTraining/MS-02-2022.git
-#          search-paths:
-#          - ms-admin-server-data
-#          username: ${USER_NAME}
-#          password: ${USER_PASSWORD}
-#          clone-on-start: true
-#          force-pull: true
-#          timeout: 5
-#          default-label: 02.-Server-registry          
-          
+ # cloud:
+ #   config:
+ #     server:
+ #       git:
+ #         uri: https://github.com/GalaxyTraining/MS-02-2022.git
+ #         search-paths:
+ #         - ms-admin-server-data
+ #         username: ${USER_NAME}
+ #         password: ${USER_PASSWORD}
+ #         clone-on-start: true
+ #         force-pull: true
+ #         timeout: 5
+ #         default-label: 02.-SpringCloud2021

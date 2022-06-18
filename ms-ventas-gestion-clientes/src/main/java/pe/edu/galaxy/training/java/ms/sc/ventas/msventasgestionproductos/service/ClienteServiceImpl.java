@@ -14,21 +14,21 @@ import pe.edu.galaxy.training.java.ms.sc.ventas.msventasgestionproductos.service
 @Service
 public class ClienteServiceImpl implements ClienteService{
  
-	private ClienteRepository productoRepository;
+	private ClienteRepository clienteRepository;
 	private JsonMapper jsonMapper;
 	
-	public ClienteServiceImpl(	ClienteRepository productoRepository,
+	public ClienteServiceImpl(	ClienteRepository clienteRepository,
 								JsonMapper jsonMapper
 									) {
 		super();
-		this.productoRepository = productoRepository;
+		this.clienteRepository = clienteRepository;
 		this.jsonMapper=jsonMapper;
 	}
 
 	@Override
 	public List<ClienteDTO> findByLike(ClienteDTO t) throws ServiceException {
 		try {
-			List<ClienteEntity> lstClienteEntity= productoRepository.findAll();
+			List<ClienteEntity> lstClienteEntity= clienteRepository.findAll();
 			return lstClienteEntity.stream().map(e -> this.getClienteDTO(e))
 					.collect(Collectors.toList());
 		} catch (Exception e) {
@@ -50,6 +50,11 @@ public class ClienteServiceImpl implements ClienteService{
 	
 	private ClienteEntity getClienteEntity(ClienteDTO d) {
 		return jsonMapper.convertValue(d, ClienteEntity.class);
+	}
+
+	@Override
+	public ClienteDTO save(ClienteDTO t) throws ServiceException {
+		return this.getClienteDTO(this.clienteRepository.save(this.getClienteEntity(t)));
 	}
 	
 }

@@ -9,6 +9,13 @@ spring:
     password: 123456789
     driver-class-name: oracle.jdbc.driver.OracleDriver
 
+  
+# Spring Boot Admin
+  boot:
+    admin:
+      client:
+        url: http://localhost:8890
+
 # Registry Client
 eureka:
    client:
