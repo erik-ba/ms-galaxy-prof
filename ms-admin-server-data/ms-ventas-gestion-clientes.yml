@@ -1,0 +1,38 @@
+server:
+  port: 8082
+    
+# postgres #
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dealect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/microservergalaxy
+    username: spserik
+    password: 123456789
+  
+# Spring Boot Admin
+  boot:
+    admin:
+      client:
+        url: http://localhost:8890
+
+# Registry Client
+eureka:
+   client:
+      registryFetchIntervalSeconds: 5
+      fetch-registry: true
+      serviceUrl:
+         defaultZone: http://localhost:8889/eureka
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
